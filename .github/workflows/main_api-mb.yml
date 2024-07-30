@@ -22,7 +22,7 @@
          uses: actions/checkout@v4
  
        - name: Setup Node ${{ env.NODE_VERSION }} Environment
-         uses: actions/setup-node@v3
+         uses: actions/setup-node@v4
          with:
            node-version: ${{ env.NODE_VERSION }}
  
@@ -43,7 +43,7 @@
            cp ./${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/${{ env.PACKAGE_PATH }}/release.zip ./release.zip
          
        - name: Upload artifact for deployment job
-         uses: actions/upload-artifact@v3
+         uses: actions/upload-artifact@v4
          with:
            name: node-app
            path: release.zip
